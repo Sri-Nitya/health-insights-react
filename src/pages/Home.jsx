@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
-//   const navigate = useNavigate();
 
   const isLoggedIn = localStorage.getItem("loggedIn") === "true";
 
@@ -31,7 +30,6 @@ export default function Home() {
         uploadedAt: new Date().toISOString(),
       };
 
-      // Store in guestUpload
       localStorage.setItem("guestUpload", JSON.stringify(uploadData));
       setMessage("✅ Report uploaded! Create an account to save history.");
       setFile(null);

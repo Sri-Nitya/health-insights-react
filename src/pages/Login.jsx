@@ -17,16 +17,13 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Fetch registered users from localStorage
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if any user matches entered credentials
     const matchedUser = users.find(
       (user) => user.email === email && user.password === password
     );
 
     if (matchedUser) {
-      // Save login session info
       localStorage.setItem("loggedIn", "true");
       localStorage.setItem("currentUser", JSON.stringify(matchedUser));
       navigate("/dashboard");
