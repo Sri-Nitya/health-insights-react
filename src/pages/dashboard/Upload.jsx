@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tesseract from "tesseract.js";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyBR0LYlmRJUuwqDg_Cm9pSfKi5fZ5B5pG4");
+const genAI = new GoogleGenerativeAI("GEMINI_API_KEY");
 
 function parseCBCValues(text) {
   const fields = {
